@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	margin: 0 auto;
+	position: relative;
+	width: 1024px;
+}
+.wrapper__gradient {
+	background: url('/static/core/images/pattern.png') repeat-y transparent 0 0;
+	height: 71px;
+	width: 1024px;
+}
