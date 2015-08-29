@@ -54,8 +54,35 @@
 				</ul>
 			</div>
 		</header>
+		<div class="content">
+			<div class="content__sidebar">
+				<div class="content-sidebar__el">
+					<div class="content-sidebar-el__title">
+						ПРАЙС-ЛИСТ
+					</div>
+					<div class="content-sidebar-el__text">
+						В связи с постоянным изменением цен на<br/>комплектующие и материалы, просим отправлять заявки<br/>на расчет стоимости интересующих Вас градирен на<br/>электронную почту: chelgradirni@mail.ru<br/>либо обращаться по телефону: +7 (351) 776-22-07
+					</div>
+				</div>
+				<div class="content-sidebar__el">
+					<div class="content-sidebar-el__title">
+						ДОКУМЕНТЫ
+					</div>
+					<div class="content-sidebar-el__text">
+						<ul>
+							<li>
+								<a href="">Руководство по эксплуатации ГВП 5-ГВП-200</a>
+							</li>
+							<li>
+								<a href="">Руководство по эксплуатации ГВП 510</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{% block content %}{% endblock %}
+		</div>
 	</div>
 </body>
 
 
-{% block content %}{% endblock %}
