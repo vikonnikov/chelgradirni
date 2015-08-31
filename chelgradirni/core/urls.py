@@ -20,4 +20,8 @@ import core
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='core/index.html')),
+    url(r'^structure/$', TemplateView.as_view(template_name='core/structure.html')),
+    url(r'^catalog/$', TemplateView.as_view(template_name='core/catalog.html')),
+    url(r'^photos/$', TemplateView.as_view(template_name='core/photos.html')),
+    url(r'^contacts/$', TemplateView.as_view(template_name='core/contacts.html')),
 ]
