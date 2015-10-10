@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.views.generic.base import TemplateView
 
+from core.views import CoolerListView
+
 import core
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='core/index.html')),
     url(r'^structure/$', TemplateView.as_view(template_name='core/structure.html')),
-    url(r'^catalog/$', TemplateView.as_view(template_name='core/catalog.html')),
+    url(r'^catalog/$', CoolerListView.as_view(), name='cooler-list'),
     url(r'^photos/$', TemplateView.as_view(template_name='core/photos.html')),
     url(r'^contacts/$', TemplateView.as_view(template_name='core/contacts.html')),
 ]

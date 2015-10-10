@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h1>Coolers</h1>
+<ul>
+{% for cooler in object_list %}
+    <li>{{ cooler.name }}</li>
+{% empty %}
+    <li>Добавьте установки в разделе администрирования</li>
+{% endfor %}
+</ul>
+{% endblock %}
