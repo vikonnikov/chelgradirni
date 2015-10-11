@@ -56,6 +56,7 @@
 		</header>
 		<div class="content">
 			<div class="content__sidebar">
+			{% block sidebar %}
 				<div class="content-sidebar__el">
 					<div class="content-sidebar-el__title content-title">
 						<span>ПРАЙС-ЛИСТ</span>
@@ -79,6 +80,7 @@
 						</ul>
 					</div>
 				</div>
+				{% endblock %}
 			</div>
 			<div class="content__main">
 				{% block content %}{% endblock %}

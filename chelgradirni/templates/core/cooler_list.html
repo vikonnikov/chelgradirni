@@ -1,12 +1,57 @@
 {% extends "core/base.html" %}
 
+{% block sidebar %}
+	{% for cooler in object_list %}
+	<div class="content-sidebar__el">
+		<div class="content-sidebar-el__title content-title">
+			<span><a href="#{{ cooler.id }}">{{ cooler.name }}</a></span>
+		</div>
+	</div>
+	{% empty %}
+    <div>Добавьте установки в разделе администрирования</div>
+	{% endfor %}
+{% endblock %}
+
 {% block content %}
-<h1>Coolers</h1>
-<ul>
 {% for cooler in object_list %}
-    <li>{{ cooler.name }}</li>
+<div class="catalog-title">
+	<span class="catalog-title_shape">
+		<span><a name="{{ cooler.id }}">{{ cooler.name }}</a></span>
+	</span>
+</div>
+
+<div>
+	<div style="width: 250px; height: 250px; border: 1px solid blue; float: left; margin-left: 20px; margin-top: 10px;"></div>
+	<table class="cooler-option__list" cellspacing="0px" cellpadding="0px">
+		<tr>
+			<td class="cooler-option__attr">Производительность, м<sup>3</sup>/час</td>
+			<td class="cooler-option__val">{{ cooler.performance }}</td>
+		</tr>
+		<tr>
+			<td class="cooler-option__attr">Тепловая нагрузка при t на входе 32&#176;С отн. вл. 60%, т=19&#176;C, &#176;C</td>
+			<td class="cooler-option__val">{{ cooler.load }}</td>
+		</tr>
+		<tr>
+			<td class="cooler-option__attr">Перепад температур (при t на входе 32&#176;С), &#176;C</div>
+			<td class="cooler-option__val">{{ cooler.drop }}</td>
+		</tr>
+		<tr>
+			<td class="cooler-option__attr">Мощность вентилятора, кВт</td>
+			<td class="cooler-option__val">{{ cooler.power }}</div>
+		</tr>
+		<tr>
+			<td class="cooler-option__attr">Масса (Ст3, толщина 3мм), кг</td>
+			<td class="cooler-option__val">{{ cooler.weight }}</td>
+		</tr>
+		<tr>
+			<td class="cooler-option__attr">Габаритные размеры (ДШВ), мм</td>
+			<td class="cooler-option__val">{{ cooler.dimension }}</td>
+		</tr>
+	</table>
+	<div class="fix"></div>
+</div>	
+
 {% empty %}
-    <li>Добавьте установки в разделе администрирования</li>
+    <div>Добавьте установки в разделе администрирования</div>
 {% endfor %}
-</ul>
 {% endblock %}
