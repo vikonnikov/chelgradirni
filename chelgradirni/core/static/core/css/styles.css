@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 @font-face {
     font-family: Avante;
     src: url("/static/core/fonts/a_AvanteBs.ttf");
@@ -10,20 +11,22 @@
     font-family: AvanteBold;
     src: url("/static/core/fonts/a_AvanteBsBold.ttf");
 }
-
 @font-face {
     font-family: AvanteLight;
     src: url("/static/core/fonts/a_AvanteBsLight.ttf");
 }
-
 @font-face {
     font-family: AvanteItalic;
     src: url("/static/core/fonts/a_AvanteBs-Italic.ttf");
 }
 
+
+
 body {
-    font-family: Avante;
+	font-family: Roboto, sans-serif;
+	font-weight: normal;
 }
+
 .wrapper {
 	margin: 0 auto;
 	position: relative;
@@ -42,12 +45,14 @@ body {
 }
 .firm-label img {
 	margin-bottom: -6px;
+	width: 100px;
+        padding-right: 10px;	
 }
 .firm-label span {
 	color: #208BDD;
 	font-family: AvanteItalic;
 	font-size: 55px;
-    margin-left: -6px;
+	margin-left: -6px;
 }
 .top__text,
 .top-menu {
@@ -64,8 +69,9 @@ body {
 }
 .top-menu li {
 	display: table-cell;
-	font-family: AvanteLight;
-	font-size: 18px;
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
 	text-align: center;
 	vertical-align: middle;
 	width: 150px;
@@ -83,11 +89,12 @@ body {
 }
 .firm-description {
 	background: #8EB1BF;
-	font-family: AvanteLight;
-	font-size: 16px;
+	font-family: Roboto, sans-serif;
+	font-size: 12px;
 	padding: 10px;
 	text-align: center;
 	width: 1004px;
+	font-weight: 300;
 }
 .firm-description li {
 	margin: 0 6px;
