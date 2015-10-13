@@ -1,5 +1,23 @@
 {% extends "core/base.html" %}
+{% load staticfiles %}
 
 {% block content %}
-Контакты
+
+<div class="page-contacts__title content-title">
+	<span>КОНТАКТЫ</span>
+</div>
+
+<div class="page-contacts__address">
+	<p>454016 г. Челябинск ул. Братьев Кашириных 87а оф. 53
+	<p>Телефон: +7(351)776-22-07
+	<p>E-mail: chelgradirni@mail.ru
+</div>
+
+<div class="page-contacts__title content-title">
+	<span>СХЕМА ПРОЕЗДА</span>
+</div>
+
+<img class="page-contacts__image-map" src="{% static 'core/images/map.png' %}" alt="Схема проезда ООО Алдан">
+
+
 {% endblock %}
