@@ -4,4 +4,8 @@ from django.contrib import admin
 
 from core.models import Cooler
 
-admin.site.register(Cooler)
+class CoolerAdmin(admin.ModelAdmin):
+    # ...
+    list_display = ('name', 'performance', 'load', 'drop', 'power', 'weight', 'dimension')
+
+admin.site.register(Cooler, CoolerAdmin)

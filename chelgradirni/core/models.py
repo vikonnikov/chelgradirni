@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 
 from django.db import models
+from photologue.models import Gallery, Photo
 
 # Create your models here.
 
@@ -12,3 +13,5 @@ class Cooler(models.Model):
     power = models.CharField(u'Мощность вентелятора', blank=True, max_length=5)
     weight = models.CharField(u'Масса', blank=True, max_length=5)
     dimension = models.CharField(u'Габаритные размеры', blank=True, max_length=15)
+    
+    photo = models.ForeignKey(Photo, verbose_name=u'Изображение ГВП', blank=True, null=True)
